@@ -1,0 +1,34 @@
+#! /bin/bash
+while true; do
+echo '**Roll the dice to get the advice of the day**: '
+rn=$(( $RANDOM % 6 + 1))
+echo "Number $rn"
+echo "-----------------------------"
+read -p 'Write back the number and get the advice of the day or type quit to exit: ' number
+ case $number in
+      "1")
+      echo "Make Change And Embrace New Beginnings"
+      ;;
+      "2")
+      echo "Expect Harmony And Balance"
+      ;;
+      "3")
+      echo "Chase Your Dreams"
+      ;;
+      "4")
+      echo "Take A Leap Of Faith"
+      ;;
+      "5")
+      echo "Offer Gratitude To The World Around You"
+      ;;
+      "6")
+      echo "Rid Your Life Of Negative Energy"
+      ;;
+      "quit" | [qQ])
+      break 
+      ;;
+
+      *)
+      echo "invalid option $number";;
+    esac
+done
